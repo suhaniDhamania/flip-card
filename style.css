@@ -1,0 +1,89 @@
+body{
+    display: flex;
+
+    justify-content: center;
+   background-color: black;
+   position: relative;
+   top:150px;
+      
+}
+
+.card{
+    width:250px;
+    height:300px;
+    perspective: 1000px;
+  
+}
+.card-inner{
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+
+.card-front, .card-back{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    position: absolute;
+  
+}
+img{
+position: relative;
+top:10px;
+width:220px;
+height:250px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+h5{
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+    position: relative;
+    top:-20px;
+}
+
+.card-front{
+    background-color: #ffb6b6;
+    color:#6c5ce7;
+    z-index: 2;
+    backface-visibility: hidden;
+
+    
+}
+.card-back{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6c5ce7;
+    color:#fff;
+    font-weight:lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+
+}
+
+h6{
+    text-align: center;
+    line-height:20px ;
+
+}
+
+h6::first-letter{
+    font-size: 25px;
+    color:#ffb6b6;
+}
+
+a{
+    text-decoration: none;
+    color: #ffb6b6;
+}
+.card:hover .card-inner {
+    transform: rotatey(180deg);
+  }
